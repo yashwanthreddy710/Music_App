@@ -8,7 +8,7 @@ import FavoritesPage from "./pages/FavoritesPage";
 import DownloadsPage from "./pages/DownloadsPage";
 import { AuthProvider, useAuth } from "./context/AuthContext";
 import PrivateRoute from './components/PrivateRoute';
-import Navbar from './components/Navbar';
+import Navbar from './components/NavBar';
 
 const AppContent = () => {
   const { user } = useAuth();
