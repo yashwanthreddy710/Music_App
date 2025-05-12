@@ -4,6 +4,8 @@ const jwt = require('jsonwebtoken');
 
 // REGISTER CONTROLLER
 exports.register = async (req, res) => {
+  console.log('Received data at backend register:', req.body);
+  
   const { name, email, password } = req.body;
 
   try {

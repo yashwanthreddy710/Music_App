@@ -10,6 +10,8 @@ const Register = () => {
   const navigate = useNavigate();
 
   const handleRegister = async (formData) => {
+    console.log('Submitting form data:', formData); 
+    
     try {
       const res = await api.post('/auth/register', formData);
       const { token, user } = res.data;
