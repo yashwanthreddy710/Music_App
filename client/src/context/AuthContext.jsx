@@ -17,7 +17,7 @@ export const AuthProvider = ({ children }) => {
 
       // Fetch user details using the token
       axios
-        .get('http://localhost:5000/api/auth/me')
+        .get('https://music-app-szmg.onrender.com/api/auth/me')
         .then((response) => setUser(response.data))
         .catch(() => setUser(null))  // If error, set user to null
         .finally(() => setLoading(false));  // Once done, set loading to false
@@ -32,7 +32,7 @@ export const AuthProvider = ({ children }) => {
     axios.defaults.headers.Authorization = `Bearer ${token}`;
     setLoading(true);
     axios
-      .get('http://localhost:5000/api/auth/me')
+      .get('https://music-app-szmg.onrender.com/api/auth/me')
       .then((response) => setUser(response.data))
       .catch(() => setUser(null))
       .finally(() => setLoading(false));
